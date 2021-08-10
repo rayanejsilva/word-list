@@ -31,7 +31,7 @@ As a **general user**:
 
 As a **general user**:
 
-- I want to clear my list.
+- I want to be able to clear my list.
 
   - [ ] Provide a clear button after the section with the sorted list.
 
