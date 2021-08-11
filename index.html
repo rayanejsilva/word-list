@@ -2,11 +2,52 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>word list</title>
+    <!--Adding Google Fonts-->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Judson&display=swap"
+      rel="stylesheet"
+    />
     <link href="./public/style.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <title>Word list</title>
   </head>
   <body>
-    <div id="root"></div>
+    <div id="root">
+      <div class="top-container">
+        <h1 id="title">Sort My Word List</h1>
+        <p id="tool-description">
+          A simple way to create and sort your own word list.
+        </p>
+      </div>
+      <!-- Input section - enter and sort words-->
+      <div class="text-box">
+        <!-- Start of the form-->
+        <div class="input-field">
+          <form id="input-form">
+            <input name="text" placeholder="enter a new word" />
+            <input type="button" value="add" />
+            <input type="button" value="remove" />
+          </form>
+          <code id="warnings" class="warning"></code>
+        </div>
+
+        <!-- Start of drop-down menu-->
+        <div class="sorter-menu">
+          <label class="sorter-label" for="sorter">Sort</label>
+          <select id="sort-type">
+            <option value="oldest">old to new</option>
+            <option value="newest">new to old</option>
+            <option value="a-z">a to z</option>
+            <option value="z-a">z to a</option>
+            <option value="shortest">short to long</option>
+            <option value="longest">long to short</option>
+          </select>
+        </div>
+      </div>
+      <!-- Output section - List of sorted words -->
+      <div id="list-container"></div>
+    </div>
 
     <script type="module" src="./src/init/init.js"></script>
   </body>
