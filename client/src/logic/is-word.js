@@ -1,10 +1,17 @@
 /**
- * Checks if a string is a word.  A word contains only letters.
+ * Check if a given string contains only letters.
  *
- * @param {string} text - A string to check for wordiness.
- * @returns {boolean} Whether or not the text is a word.
+ * - @param {string} (str = '') - The string to inspect.
+ * - @returns {boolean} true if there is a match between the regular expression and the string. Otherwise, false.
+ *
  * @example
  *
- * // ... write this!
+ * isWord("car");
+ * // -> true
+ *
+ * isWord("c@r");
+ * // -> false
  */
-export const isWord = (text = '') => /^[a-zA-Z]+$/.test(text);
+
+// Use a regular expression to get a string contains only letter (both Uppercase or Lowercase)
+export const isWord = (str = '') => /^[a-zA-Z]+$/.test(str);
