@@ -9,10 +9,9 @@ import { renderList } from '../components/render-list.js';
  *
  * @param {Event} event - The event triggered when the user clicks the button.
  */
-export const inputWord = (event) => {
+export const handleInputWord = (event) => {
   /* -- entry point for adding or removing a word -- */
   // debugger;
-
   /* -- check the target -- */
   if (event.target.type !== 'button') {
     return;

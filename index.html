@@ -8,7 +8,7 @@
       href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Judson&display=swap"
       rel="stylesheet"
     />
-    <link href="./public/style.css" rel="stylesheet" />
+    <link href="./client/styles/index.css" rel="stylesheet" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <title>Word list</title>
   </head>
@@ -25,7 +25,7 @@
         <!-- Start of the form-->
         <div class="input-field">
           <form id="input-form">
-            <input name="text" placeholder="enter a new word" />
+            <input type="text" id="enter" placeholder="enter a new word" />
             <input type="button" id="btn-add" value="add" />
             <input type="button" id="btn-remove" value="remove" />
           </form>
@@ -35,12 +35,12 @@
         <div class="sorter-menu">
           <label class="sorter-label" for="sorter">Sort</label>
           <select id="sort-type">
-            <option value="oldest">old to new</option>
-            <option value="newest">new to old</option>
-            <option value="a-z">a to z</option>
-            <option value="z-a">z to a</option>
-            <option value="shortest">short to long</option>
-            <option value="longest">long to short</option>
+            <option class="sort-text" value="oldest">old to new</option>
+            <option class="sort-text" value="newest">new to old</option>
+            <option class="sort-text" value="a-z">a to z</option>
+            <option class="sort-text" value="z-a">z to a</option>
+            <option class="sort-text" value="shortest">short to long</option>
+            <option class="sort-text" value="longest">long to short</option>
           </select>
         </div>
       </div>
