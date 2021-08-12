@@ -10,45 +10,35 @@ import { renderList } from '../components/render-list.js';
  * @param {Event} event - The event triggered when the user clicks the button.
  */
 export const inputWord = (event) => {
-  /* -- entry point for adding or removing a word -- */
-  // debugger;
-
-  /* -- check the target -- */
   if (event.target.type !== 'button') {
     return;
   }
-
-  /* -- gather user input from DOM -- */
   const text = event.target.form.text.value;
   const action = event.target.value;
-
-  /* -- use the input and data to implement the user story --
-
-    a user can add a new word to the list
-      given the input contains non-letters,
-        it will not be added
-        a warning is displayed
-      given the input contains only letters
-        it will be added to the words list
-        the list will be re-rendered
-    a user can remove words from the list
-      given the input is not in the list
-        a warning is posted
-      given the input is in the list
-        it is removed
-        the list is re-rendered
-  */
-
   const warnings = document.getElementById('warnings');
-  warnings.innerText = '';
 
   if (action === 'add') {
-    // ... write some code ...
-  } else if (action === 'remove') {
-    // ... write some code ...
+    warnings.innerText = '';
+    if (!isWord(text)) {
+      warnings.style.fontSize = '18px';
+      warnings.style.marginTop = '20px';
+      warnings.style.fontWeight = 'bold';
+      warnings.style.color = '#eb3e35';
+      warnings.style.fontFamily = 'Judson';
+      warnings.innerHTML = `${text} is not a word. Try again!`;
+    } else {
+      data.words.push(text);
+    }
   }
 
-  /* -- render new words -- */
+  if (action === 'remove') {
+    if (!data.words.includes(text)) {
+      warnings.style.color = '#eb3e35';
+      warnings.innerHTML = `${text} is not in the list`;
+    } else {
+      data.words.splice(data.words.indexOf(text), 1);
+    }
+  }
   const sorted = sortStrings(data.words, data.sort);
   const newList = renderList(sorted);
 

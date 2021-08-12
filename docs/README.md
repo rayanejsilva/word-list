@@ -56,9 +56,9 @@
 
 <details><summary><a href="../../client/src/handlers/input-word.js" id="clientsrchandlersinput-wordjs">../client/src/handlers/input-word.js</a></summary>
 
-<a name="inputWord"></a>
+<a name="handleInputWord"></a>
 
-## inputWord
+## handleInputWord
 
 Entry point for users adding a word to the list.
 It is called each time the user clicks the "add word" button.
@@ -110,24 +110,6 @@ It is called each time the input selection changes.
 
 <details><summary><a href="../../client/src/logic/is-word.js" id="clientsrclogicis-wordjs">../client/src/logic/is-word.js</a></summary>
 
-<a name="isWord"></a>
-
-## isWord ⇒ <code>boolean</code>
-
-Checks if a string is a word. A word contains only letters.
-
-**Returns**: <code>boolean</code> - Whether or not the text is a word.
-
-| Param | Type                | Description                      |
-| ----- | ------------------- | -------------------------------- |
-| text  | <code>string</code> | A string to check for wordiness. |
-
-**Example**
-
-```js
-// ... write this!
-```
-
 </details>
 
 <details><summary><a href="../../client/src/logic/sort-strings.js" id="clientsrclogicsort-stringsjs">../client/src/logic/sort-strings.js</a></summary>
@@ -136,21 +118,16 @@ Checks if a string is a word. A word contains only letters.
 
 ## sortStrings ⇒ <code>Array.&lt;string&gt;</code>
 
-Sorts an array of strings in different ways.
-It does not modify the argument (no side-effects).
+Sorts an array of strings according to alphabetical order, length, and insertion order.
 
-**Returns**: <code>Array.&lt;string&gt;</code> - A new sorted array containing the same strings as toSort.
+Returns a new array without modifying the original array.
 
-| Param      | Type                              | Default                                     | Description                                                                                                                                                                                                                                                                                                             |
-| ---------- | --------------------------------- | ------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [toSort]   | <code>Array.&lt;string&gt;</code> | <code>&#x27;&#x27;</code>                   | The array of strings to sort.                                                                                                                                                                                                                                                                                           |
-| [sortType] | <code>string</code>               | <code>&quot;&#x27;oldest&#x27;&quot;</code> | How to sort the strings, 6 options. - oldest: from oldest to newest. - newest: from newest to oldest. - shortest: from shortest to longest. - longest: from longest to shortest. - a: alphabetical order. - z: reverse alphabetical order. If the sortType is not one of these 6 options, a copy of toSort is returned. |
+**Returns**: <code>Array.&lt;string&gt;</code> - A new array with the same string, but sorted.
 
-**Example**
-
-```js
-// ... write this!
-```
+| Param            | Type                              | Default                           | Description                      |
+| ---------------- | --------------------------------- | --------------------------------- | -------------------------------- |
+| [strArray]       | <code>Array.&lt;string&gt;</code> | <code>[]</code>                   | The array of strings to sort.    |
+| [dropDownOption] | <code>Array.&lt;string&gt;</code> | <code>[&#x27;oldest&#x27;]</code> | Sort array by the option values. |
 
 </details>
 

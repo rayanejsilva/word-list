@@ -1,19 +1,29 @@
 /**
- * Sorts an array of strings in different ways.
- * It does not modify the argument (no side-effects).
+ * Sorts an array of strings according to alphabetical order, length, and insertion order.
  *
- * @param {string[]} [toSort=''] - The array of strings to sort.
- * @param {string} [sortType='oldest'] - How to sort the strings, 6 options.
- * - oldest: from oldest to newest.
- * - newest: from newest to oldest.
- * - shortest: from shortest to longest.
- * - longest: from longest to shortest.
- * - a: alphabetical order.
- * - z: reverse alphabetical order.
- * If the sortType is not one of these 6 options, a copy of toSort is returned.
- * @returns {string[]} A new sorted array containing the same strings as toSort.
- * @example
+ * Returns a new array without modifying the original array.
  *
- * // ... write this!
+ * @param {string[]} [strArray=[]] - The array of strings to sort.
+ * @param {string[]} [dropDownOption=['oldest']] - Sort array by the option values.
+ * @returns {string[]} A new array with the same string, but sorted.
+ *
  */
-export const sortStrings = () => {};
+
+export const sortStrings = (strArray = [], dropDownOption = ['oldest']) => {
+  // create a copy of the original array to avoid side effects.
+  const sortedArray = strArray.slice();
+  if (dropDownOption === 'newest') {
+    sortedArray.reverse();
+  } else if (dropDownOption === 'a-z') {
+    sortedArray.sort();
+  } else if (dropDownOption === 'z-a') {
+    sortedArray.sort().reverse();
+  } else if (dropDownOption === 'shortest') {
+    sortedArray.sort((a, b) => a.length - b.length);
+  } else if (dropDownOption === 'longest') {
+    sortedArray.sort((a, b) => a.length - b.length).reverse();
+  } else {
+    return sortedArray;
+  }
+  return sortedArray;
+};

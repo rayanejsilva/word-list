@@ -30,23 +30,23 @@ describe('sorts the strings in an array in different ways', () => {
       expect(sortStrings([], 'a')).toEqual([]);
     });
     it('3 items', () => {
-      expect(sortStrings(['b', 'a', 'c'], 'a')).toEqual(['a', 'b', 'c']);
+      expect(sortStrings(['b', 'a', 'c'], 'a-z')).toEqual(['a', 'b', 'c']);
     });
     it('4 items', () => {
       const expected = ['a', 'b', 'c', 'd'];
-      expect(sortStrings(['b', 'd', 'c', 'a'], 'a')).toEqual(expected);
+      expect(sortStrings(['b', 'd', 'c', 'a'], 'a-z')).toEqual(expected);
     });
   });
   describe('reverse-alphabetical order', () => {
     it('empty array', () => {
-      expect(sortStrings([], 'z')).toEqual([]);
+      expect(sortStrings([], 'z-a')).toEqual([]);
     });
     it('3 items', () => {
-      expect(sortStrings(['b', 'a', 'c'], 'z')).toEqual(['c', 'b', 'a']);
+      expect(sortStrings(['b', 'a', 'c'], 'z-a')).toEqual(['c', 'b', 'a']);
     });
     it('4 items', () => {
       const expected = ['d', 'c', 'b', 'a'];
-      expect(sortStrings(['b', 'd', 'c', 'a'], 'z')).toEqual(expected);
+      expect(sortStrings(['b', 'd', 'c', 'a'], 'z-a')).toEqual(expected);
     });
   });
   describe('longest to shortest', () => {
@@ -96,12 +96,12 @@ describe('sorts the strings in an array in different ways', () => {
     });
     it('alphabetical order', () => {
       const strings = ['a', 'b', 'c'];
-      sortStrings(strings, 'a');
+      sortStrings(strings, 'a-z');
       expect(strings).toEqual(['a', 'b', 'c']);
     });
     it('reverse-alphabetical order', () => {
       const strings = ['a', 'b', 'c'];
-      sortStrings(strings, 'z');
+      sortStrings(strings, 'z-a');
       expect(strings).toEqual(['a', 'b', 'c']);
     });
     it('shortest to longest', () => {
