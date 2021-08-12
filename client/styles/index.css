@@ -5,16 +5,19 @@
   margin: 0;
   box-sizing: border-box;
 }
+
 html {
   box-sizing: border-box;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
 }
+
 *,
-*:before,
-*:after {
+*::before,
+*::after {
   box-sizing: inherit;
 }
+
 body {
   display: flex;
   flex-direction: column;
@@ -47,18 +50,17 @@ body {
   display: flex;
   width: 750px;
   height: 100px;
-  margin: 0 0px 250px 20px;
+  margin-left: 20px;
   padding: 0 0 0 20px;
   max-width: auto;
   min-width: auto;
-  /*   background-color: salmon; */
 }
+
 .input-field {
   display: inline;
   width: 470px;
   height: 80px;
   margin-top: 5px;
-  /*  background-color: royalblue; */
 }
 
 .sorter-menu {
@@ -66,8 +68,8 @@ body {
   width: 280px;
   height: 55px;
   margin: 5px 18px 30px 30px;
-  /*   background-color: rgb(225, 209, 65); */
 }
+
 .top-container {
   display: flex;
   flex-direction: column;
@@ -75,8 +77,8 @@ body {
   width: 600px;
   height: 150px;
   margin-bottom: 30px;
-  /*  background-color: rgb(29, 167, 155); */
 }
+
 #title {
   font-family: 'Archivo Black', sans-serif;
   font-size: 48px;
@@ -91,7 +93,6 @@ body {
   padding-top: 30px;
   width: 500px;
   height: 100px;
-  /*  background-color: aqua; */
 }
 
 #tool-description {
@@ -108,7 +109,6 @@ body {
   width: 500px;
   height: 100px;
   margin-top: 60px;
-  /*  background-color: rosybrown; */
 }
 
 input,
@@ -123,21 +123,24 @@ label {
   font-weight: 500;
   padding-top: 2px;
   margin-right: 8px;
+  color: #f03f35;
 }
 
 #input-form {
   width: 480px;
 }
+
 #btn-add,
 #btn-remove {
   width: 78px;
   height: 34px;
   text-align: center;
   border-radius: 12px;
-  margin: 5px 8px 0 0;
+  margin-top: 5px;
+  margin-right: 8px;
   padding-bottom: 4px;
   border: 2px solid transparent;
-  box-shadow: 0px 15px 10px -15px rgb(180, 174, 174);
+  box-shadow: 1px 15px 10px -15px rgb(180, 174, 174);
 }
 
 #btn-add {
@@ -169,10 +172,6 @@ select {
   border-radius: 10px;
   color: #f03f35;
   border: none;
-}
-
-label {
-  color: #f03f35;
 }
 
 #sort-type {
