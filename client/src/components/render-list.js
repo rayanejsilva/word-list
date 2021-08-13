@@ -1,10 +1,3 @@
-/* eslint-disable spellcheck/spell-checker */
-/**
- * Renders an array of strings.
- *
- * - @param {string[]} [toRender=[]] - an array of strings to render into the UI.
- * - @returns {string[]} - a rendered words list.
- */
 export const renderList = (toRender = []) => {
   // Create an unordered list
   const ulEl = document.createElement('ul');
