@@ -48,6 +48,18 @@
 
 <details><summary><a href="../../client/src/components/render-list.js" id="clientsrccomponentsrender-listjs">../client/src/components/render-list.js</a></summary>
 
+<a name="renderList"></a>
+
+## renderList ⇒ <code>Array.&lt;string&gt;</code>
+
+Renders an array of strings.
+
+**Returns**: <code>Array.&lt;string&gt;</code> - - a rendered words list.
+
+| Param      | Type                              | Default         | Description                                |
+| ---------- | --------------------------------- | --------------- | ------------------------------------------ |
+| [toRender] | <code>Array.&lt;string&gt;</code> | <code>[]</code> | an array of strings to render into the UI. |
+
 </details>
 
 ---
@@ -56,9 +68,9 @@
 
 <details><summary><a href="../../client/src/handlers/input-word.js" id="clientsrchandlersinput-wordjs">../client/src/handlers/input-word.js</a></summary>
 
-<a name="handleInputWord"></a>
+<a name="inputWord"></a>
 
-## handleInputWord
+## inputWord
 
 Entry point for users adding a word to the list.
 It is called each time the user clicks the "add word" button.
@@ -71,9 +83,9 @@ It is called each time the user clicks the "add word" button.
 
 <details><summary><a href="../../client/src/handlers/sort-words.js" id="clientsrchandlerssort-wordsjs">../client/src/handlers/sort-words.js</a></summary>
 
-<a name="sortWords"></a>
+<a name="handleSortWords"></a>
 
-## sortWords
+## handleSortWords
 
 Entry point for users sorting the list of words in this app.
 It is called each time the input selection changes.
