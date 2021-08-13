@@ -48,18 +48,6 @@
 
 <details><summary><a href="../../client/src/components/render-list.js" id="clientsrccomponentsrender-listjs">../client/src/components/render-list.js</a></summary>
 
-<a name="renderList"></a>
-
-## renderList ⇒ <code>Array.&lt;string&gt;</code>
-
-Renders an array of strings.
-
-**Returns**: <code>Array.&lt;string&gt;</code> - - a rendered words list.
-
-| Param      | Type                              | Default         | Description                                |
-| ---------- | --------------------------------- | --------------- | ------------------------------------------ |
-| [toRender] | <code>Array.&lt;string&gt;</code> | <code>[]</code> | an array of strings to render into the UI. |
-
 </details>
 
 ---
