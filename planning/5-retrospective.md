@@ -4,7 +4,7 @@
 
 ### **Stop Doing**
 
-- Don't use the debugger statement and break points to explore my code.
+- Not using the debugger statement and break points to explore my code.
 
 ### **Continue Doing**
 
