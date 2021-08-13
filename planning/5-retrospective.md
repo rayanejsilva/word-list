@@ -17,4 +17,4 @@
 
 ### **Lessons Learned**
 
-Split code into multiple files, regular expression, ternary operator and conditional chains, event propagation, event capturing, render list strings and spread operator.
+- Split code into multiple files, regular expression, ternary operator and conditional chains, event propagation, event capturing, render list strings and spread operator.
