@@ -1,3 +1,4 @@
+/* eslint-disable spellcheck/spell-checker */
 export const renderList = (toRender = []) => {
   // Create an unordered list
   const ulEl = document.createElement('ul');
